@@ -1,0 +1,267 @@
+  html, body {
+  margin: 0;
+  padding: 0;
+}
+      
+canvas,
+.replay-button {
+  position: absolute;
+  top: 250px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+}
+
+.replay-button {
+  font-size: 24px;
+  color: #333;
+  width: 200px;
+  height: 80px;
+  background: white;
+  border-radius: 5px;
+  border: none;
+  z-index: 999999999;
+  cursor: pointer;
+}
+
+#start-screen {
+  font-family: arial, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 99999999;
+  background: #ddd;
+}
+
+#start-screen-content {
+  background: white;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 768px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.flexcontainer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  flex: 1;
+  padding: 10px;
+}
+
+.row:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+
+.instructions {
+  display: inline-block;
+  width: calc(50% - 20px);
+}
+
+#play {
+
+}
+
+div {
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .replay-button {
+    font-size: 16px;
+    height: 60px;
+  }
+}
+
+.conference-btns .leave {
+  display: none;
+}
+
+.conference-btns .camera-on {
+  display: none;
+}
+#camera-icon-container {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.video-container {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  left: 0px;
+}
+
+.avatar {
+  position: absolute;
+  height: 288px;
+  width: 150px;
+}
+
+.torso {
+  width: 6px;
+  height: 68px;
+  display: block;
+  position: absolute;
+  top: 151px;
+  left: 73px;
+}
+
+.leftleg {
+  width: 6px;
+  height: 70px;
+  display: block;
+  position: absolute;
+  top: 218px;
+  left: 72px;
+  transform: rotate(12deg);
+  transform-origin: top;
+}
+
+.rightleg {
+  width: 6px;
+  height: 70px;
+  display: block;
+  position: absolute;
+  top: 219px;
+  left: 74px;
+  transform: rotate(-12deg);
+  transform-origin: top;
+}
+
+.leftarm {
+  width: 62px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 171px;
+  left: 16px;
+  transform: rotate(-13deg);
+  transform-origin: top;
+}
+
+.rightarm {
+  width: 62px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 171px;
+  left: 78px;
+  transform: rotate(13deg);
+  transform-origin: top;
+}
+
+.torso-0,
+.leftarm-0,
+.rightarm-0,
+.leftleg-0,
+.rightleg-0 {
+  border: 3px solid #9ed8db;
+}
+
+#video-container-0 {
+  border: 3px solid #9ed8db;
+  background: #9ed8db;
+}
+
+.torso-1,
+.leftarm-1,
+.rightarm-1,
+.leftleg-1,
+.rightleg-1 {
+  border: 3px solid #d64550;
+}
+
+#video-container-1 {
+  border: 3px solid #d64550;
+  background: #d64550;
+}
+
+.torso-2,
+.leftarm-2,
+.rightarm-2,
+.leftleg-2,
+.rightleg-2 {
+  border: 3px solid #8390fa;
+}
+
+#video-container-2 {
+  border: 3px solid #8390fa;
+  background: #8390fa;
+}
+
+.torso-3,
+.leftarm-3,
+.rightarm-3,
+.leftleg-3,
+.rightleg-3 {
+  border: 3px solid #fcaa67;
+}
+
+#video-container-3 {
+  border: 3px solid #fcaa67;
+  background: #fcaa67;
+}
+
+video {
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+  position: absolute;
+  border-radius: 100px;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
+}
+
+#main-wrapper {
+  padding: 0;
+  background-color: black;
+}
+
+#video-container {
+  position: relative;
+  background-color: black;
+  height: 90%;
+}
+
+#control-container {
+  background-color: #14151d;
+  border-top: 2px solid #3e44fe;
+}
+
+.input-group {
+  top: 20%;
+}
+
+.pane {
+  height: 500px;
+  width: 1500px;
+  position: relative;
+  margin: auto;
+}
+
+.copy-join-link {
+  color: white;
+  font-size: small;
+  text-align: center;
+}
